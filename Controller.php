@@ -55,8 +55,6 @@ class Controller
         $quotedMail = $this->db->quote($email);
         $quotedPass = $this->db->quote(md5($password));
 
-        //echo "INSERT INTO (name, email, password) VALUES ({$quotedName}, {$quotedMail}, {$quotedPass})"; die();
-
         return $this->db->query("INSERT INTO users (name, email, password) VALUES ({$quotedName}, {$quotedMail}, {$quotedPass})");
     }
 
